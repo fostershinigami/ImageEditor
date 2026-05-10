@@ -48,7 +48,7 @@ row.addLayout(col2, 80)
 
 win.setLayout(row)
 
-'''class ImageProcessor():
+class ImageProcessor():
     def __init__(self):
         self.image = None
         self.dir = None
@@ -92,7 +92,6 @@ win.setLayout(row)
         lb_image.setPixmap(scaled_pixmap)
         lb_image.setVisible(True)
 
-'''
 
 #функции
 def openDir():
@@ -124,14 +123,14 @@ def showChosenImage():
 
 
 
-#workimage = ImageProcessor() #текущая рабочая картинка для работы
+workimage = ImageProcessor() #текущая рабочая картинка для работы
 img_list.currentRowChanged.connect(showChosenImage)
 
 
-#btn_graysc.clicked.connect(workimage.do_bw)
+btn_graysc.clicked.connect(workimage.do_bw)
 btn_folder.clicked.connect(showImageList)
-#btn_flip.clicked.connect(workimage.mirror)
-#btn_save.clicked.connect(workimage.saveImage)
+btn_flip.clicked.connect(workimage.mirror)
+btn_save.clicked.connect(workimage.saveImage)
 
 win.show()
 
